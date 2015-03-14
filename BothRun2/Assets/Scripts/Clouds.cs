@@ -47,7 +47,7 @@ public class Clouds : MonoBehaviour {
             randomIndex = 0;
         }
 
-        Debug.Log("randomIndex:" + randomIndex); 
+        //Debug.Log("randomIndex:" + randomIndex); 
 
         GameObject obj =GameManager.Active.cloudsIns[randomIndex];
         obj.SetActive(true);
@@ -56,7 +56,7 @@ public class Clouds : MonoBehaviour {
         distance += Random.Range(3,5);
         randomIndex++;
 		GameManager.Active.cloudsNum++;
-        Debug.Log(" CreateCloud  GameManager.Active.cloudsNum: " + GameManager.Active.cloudsNum); 
+        //Debug.Log(" CreateCloud  GameManager.Active.cloudsNum: " + GameManager.Active.cloudsNum); 
     }
 
     //缓慢移动中景
