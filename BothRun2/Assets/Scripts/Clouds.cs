@@ -59,6 +59,5 @@ public class Clouds : MonoBehaviour {
         Debug.Log(" CreateCloud  GameManager.Active.cloudsNum: " + GameManager.Active.cloudsNum); 
     }
 
-    //思路 间隔随机距离不断创建，云看不到的时候自动销毁。
     //缓慢移动中景
 }

@@ -47,17 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\NewBehaviourScript.cs" />
-     <Compile Include="Assets\PoolManagerExampleFiles\Scripts\CreationExample.cs" />
-     <Compile Include="Assets\PoolManagerExampleFiles\Scripts\OnCreatedDelegateExample.cs" />
-     <Compile Include="Assets\PoolManagerExampleFiles\Scripts\OnSpawnedExample.cs" />
-     <Compile Include="Assets\PoolManagerExampleFiles\Scripts\ParticleWaitTest.cs" />
-     <Compile Include="Assets\PoolManagerExampleFiles\Scripts\ReallySimpleAudioSpawner.cs" />
-     <Compile Include="Assets\PoolManagerExampleFiles\Scripts\ReallySimpleParticleSpawner.cs" />
-     <Compile Include="Assets\PoolManagerExampleFiles\Scripts\SimpleSpawner.cs" />
      <Compile Include="Assets\Scripts\Cloud.cs" />
      <Compile Include="Assets\Scripts\Clouds.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\Ground.cs" />
+     <Compile Include="Assets\Scripts\Midground.cs" />
      <Compile Include="Assets\Scripts\Wall.cs" />
      <Compile Include="Assets\T4M\Scripts\T4MBillBObjSC.cs" />
      <Compile Include="Assets\T4M\Scripts\T4MLodObjSC.cs" />

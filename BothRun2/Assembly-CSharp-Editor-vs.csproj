@@ -106,7 +106,7 @@
      <None Include="Assets\Plugins\PathologicalGames\readme.txt" />
      <None Include="Assets\T4M\Shaders\ShaderModel2\BumpSpec\T4M 2 TexturesBumpSpec.shader" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/LYY/Documents/BothRun2/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>D:/MyPro/MyCode/BothRun2/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>

@@ -5,7 +5,6 @@ public class Cloud : MonoBehaviour {
 
     Transform m_transform;
     float speed = 0.05f;
-   // public float lifeTime=30f;
 
 
     void Start()
@@ -16,11 +15,6 @@ public class Cloud : MonoBehaviour {
 
     void Update()
     {
-        //lifeTime -= Time.deltaTime;
-        //if (lifeTime < 0)
-        //{
-        //    Destroy(this.gameObject);
-        //}
         m_transform.Translate(Vector3.back * speed);
     }
 
@@ -33,9 +27,7 @@ public class Cloud : MonoBehaviour {
 
 			GameManager.Active.cloudsNum--;
             Debug.Log("GameManager.Active.cloudsNum:" + GameManager.Active.cloudsNum);
-           // Debug.Log(" Destroy(this)");
             this.gameObject.SetActive(false);
-           // Destroy(this.gameObject);
         }
     }
 
