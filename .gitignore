@@ -54,3 +54,4 @@ Temporary Items
 BothRun2/Temp/*
 BothRun2/obj/*
 BothRun2/Library/**
+BothRun2/Library/ScriptAssemblies/*
