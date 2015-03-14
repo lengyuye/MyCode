@@ -52,3 +52,5 @@ Temporary Items
 *.sln
 *.suo
 BothRun2/Temp*
+BothRun2/obj*
+BothRun2/Library*
