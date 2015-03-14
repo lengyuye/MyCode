@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Clouds.cs">
+    <Files>
+      <File FileName="..\NewTest\Assets\New Folder 2\NewBehaviourScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Cloud.cs" Line="12" Column="6" />
+      <File FileName="Assets\Scripts\Clouds.cs" Line="41" Column="20" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
