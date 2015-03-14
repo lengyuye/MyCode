@@ -53,8 +53,12 @@ Temporary Items
 *.suo
 BothRun2/Temp/*
 BothRun2/obj/*
-BothRun2/Library/**
+BothRun2/Library/*
 BothRun2/Library/ScriptAssemblies/*
 *.mdb
 *.mdb
 BothRun2/Library/metadata/d9/d9ed2cc87fe65c14eaba28e53a9f7d92
+BothRun2/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+BothRun2/Library/metadata/d9/d9ed2cc87fe65c14eaba28e53a9f7d92
+*.mdb
+BothRun2/Library/assetDatabase3
