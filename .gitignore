@@ -64,3 +64,4 @@ BothRun2/Library/metadata/d9/d9ed2cc87fe65c14eaba28e53a9f7d92
 BothRun2/Library/assetDatabase3
 BothRun2/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
 BothRun2/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll.mdb
+*.dll
