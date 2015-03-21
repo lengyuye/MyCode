@@ -15,4 +15,14 @@ public class Wall : MonoBehaviour {
     {
         m_transform.localPosition = new Vector3(m_transform.localPosition.x, m_transform.localPosition.y, Random.Range(5, 20));
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            GameManager.Active.GameOver();
+        }
+        
+    }
+
 }
