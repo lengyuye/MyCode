@@ -8,7 +8,7 @@ public class Clouds : MonoBehaviour {
     float distance =-10f;
 
     float createTimeInterval = 0.5f;
-
+    int time = 5;
 
 
 	// Use this for initialization
@@ -25,11 +25,22 @@ public class Clouds : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         createTimeInterval -= Time.deltaTime;
-        if (createTimeInterval < 0)
+        if (time > 0)
         {
-            createTimeInterval = 0.5f;
             CreateCloud();
+            time--;
         }
+        else
+        {
+            if (createTimeInterval < 0)
+            {
+                createTimeInterval = 0.5f;
+                CreateCloud();
+            }
+        }
+
+
+        
 
 	}
 
