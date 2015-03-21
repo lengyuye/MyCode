@@ -9,17 +9,22 @@ public class GameManager : MonoBehaviour {
     public List<GameObject> cloudsIns = new List<GameObject>();
     public int maxColudsNum = 25;
 
-    public GameObject startObj;
-
     public static GameManager Active;
-
 	public int cloudsNum=0;
-
+    public UILabel lbTime;
 
     void Awake()
     {
-        Active = this;
-        
+        Active = this;   
+    }
+
+
+    void Update()
+    {
+        if (lbTime)
+        {
+            lbTime.text = string.Format("Time:{0}s", Time.realtimeSinceStartup.ToString("0.00"));
+        }
     }
 
 

@@ -9,3 +9,14 @@ C:\Users\LYY\Documents\BothRun2\Temp\bin\Debug\ICSharpCode.NRefactory.dll
 C:\Users\LYY\Documents\BothRun2\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
 C:\Users\LYY\Documents\BothRun2\obj\Debug\Assembly-CSharp-firstpass.dll
 C:\Users\LYY\Documents\BothRun2\obj\Debug\Assembly-CSharp-firstpass.pdb
+D:\MyPro\MyCode\BothRun2\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+D:\MyPro\MyCode\BothRun2\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+D:\MyPro\MyCode\BothRun2\Temp\bin\Debug\UnityEditor.dll
+D:\MyPro\MyCode\BothRun2\Temp\bin\Debug\UnityEngine.dll
+D:\MyPro\MyCode\BothRun2\Temp\bin\Debug\Mono.Cecil.dll
+D:\MyPro\MyCode\BothRun2\Temp\bin\Debug\nunit.framework.dll
+D:\MyPro\MyCode\BothRun2\Temp\bin\Debug\Unity.DataContract.dll
+D:\MyPro\MyCode\BothRun2\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+D:\MyPro\MyCode\BothRun2\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+D:\MyPro\MyCode\BothRun2\obj\Debug\Assembly-CSharp-firstpass.dll
+D:\MyPro\MyCode\BothRun2\obj\Debug\Assembly-CSharp-firstpass.pdb
