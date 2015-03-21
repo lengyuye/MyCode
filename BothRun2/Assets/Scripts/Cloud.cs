@@ -21,12 +21,9 @@ public class Cloud : MonoBehaviour {
 	
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("OnCollisionEnter");
         if (collision.transform.tag.Equals("end"))
         {
-
 			GameManager.Active.cloudsNum--;
-            Debug.Log("GameManager.Active.cloudsNum:" + GameManager.Active.cloudsNum);
             this.gameObject.SetActive(false);
         }
     }

@@ -16,9 +16,9 @@ public class Midground : MonoBehaviour {
         time -= Time.deltaTime;
         if (time < 0)
         {
-            Debug.Log("time = 10;");
+           // Debug.Log("time = 10;");
             speed = -speed;
-            Debug.Log("speed:" + speed);
+           // Debug.Log("speed:" + speed);
             time = 10;
         }
         m_transform.Translate(Vector3.back * speed);

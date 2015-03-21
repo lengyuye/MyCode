@@ -4,21 +4,26 @@ using System.Collections;
 public class Monkey : MonoBehaviour {
     Transform m_transform;
     float delayTime = 0.5f;
+    private float orignalY = 0f;
 	// Use this for initialization
 	void Start () {
         m_transform = this.transform;
+        orignalY = this.transform.position.y;
 	}
 	
 
     void Jump()
     {
-        Debug.Log("Jump");
         m_transform.Translate(Vector3.up * 0.5f); 
     }
 
     IEnumerator Down()
     {
         yield return new WaitForSeconds(0.5f);
-        m_transform.Translate(Vector3.down * 0.5f); 
+        if (m_transform.position.y > orignalY)
+        {
+            m_transform.Translate(Vector3.down * 0.5f); 
+        }
+      
     }
 }
