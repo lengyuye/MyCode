@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour {
     public static GameManager Active;
 	public int cloudsNum=0;
     public UILabel lbTime;
+    public UILabel lbGameOver;
 
     void Awake()
     {
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Time.timeScale = 1;
         for (int i = 0; i < maxColudsNum; i++)
         {
             int randomIndex = Random.Range(0, GameManager.Active.cloudPrefabs.Count - 1);
@@ -38,7 +40,14 @@ public class GameManager : MonoBehaviour {
             obj.SetActive(false);
             cloudsIns.Add(obj);
         }
+        if (lbGameOver) lbGameOver.gameObject.SetActive(false);
 	}
-	
 
+
+
+    public void GameOver()
+    {
+        Time.timeScale = 0;
+        lbGameOver.gameObject.SetActive(true);
+    }
 }
