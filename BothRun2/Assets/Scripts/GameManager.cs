@@ -14,6 +14,11 @@ public class GameManager : MonoBehaviour {
     public UILabel lbTime;
     public UILabel lbGameOver;
 
+    public GameObject btnExit;
+    public GameObject btnTryAgain;
+    public GameObject spMenu;
+    private bool isOver = false;
+
     void Awake()
     {
         Active = this;   
@@ -24,7 +29,8 @@ public class GameManager : MonoBehaviour {
     {
         if (lbTime)
         {
-            lbTime.text = string.Format("Time:{0}s", Time.realtimeSinceStartup.ToString("0.00"));
+            if (isOver) return;
+            lbTime.text = string.Format("Time:{0}s", Time.timeSinceLevelLoad.ToString("0.00"));
         }
     }
 
@@ -47,7 +53,36 @@ public class GameManager : MonoBehaviour {
 
     public void GameOver()
     {
-        Time.timeScale = 0;
-        lbGameOver.gameObject.SetActive(true);
+        //if (!isOver)
+        {
+            isOver = true;
+            Time.timeScale = 0;
+            SetMenuShow(true);
+        }
+      
+    }
+
+    private void SetMenuShow(bool isShow)
+    {
+        lbGameOver.gameObject.SetActive(isShow);
+        btnExit.SetActive(isShow);
+        btnTryAgain.SetActive(isShow);
+        spMenu.SetActive(isShow);
+    }
+
+    void Exit()
+    {
+        Debug.Log("Exit");
+        Application.Quit();
+    }
+
+    void TryAgain()
+    {
+        Application.LoadLevel(0);
+        //Debug.Log("TryAgain");
+        //Time.timeScale = 1;
+        //isOver = false;
+        //SetMenuShow(false);
+        //lbTime.text = string.Format("Time:{0}s", 0);
     }
 }

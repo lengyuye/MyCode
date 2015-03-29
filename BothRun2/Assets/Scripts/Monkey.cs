@@ -10,12 +10,15 @@ public class Monkey : MonoBehaviour {
         m_transform = this.transform;
         orignalY = this.transform.position.y;
 	}
-
+    private int i = 0;
     void Update()
     {
         if ((orignalY - m_transform.position.y) > 0.05f)
         {
-            GameManager.Active.GameOver();
+            //i++;
+            //if(i==1) 
+                GameManager.Active.GameOver();
+            
         }
     }
 	
