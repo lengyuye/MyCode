@@ -171,6 +171,8 @@
      <Compile Include="Assets\Scripts\Ground.cs" />
      <Compile Include="Assets\Scripts\Midground.cs" />
      <Compile Include="Assets\Scripts\Monkey.cs" />
+     <Compile Include="Assets\Scripts\Monkey1.cs" />
+     <Compile Include="Assets\Scripts\StartGame.cs" />
      <Compile Include="Assets\Scripts\Wall.cs" />
      <Compile Include="Assets\T4M\Scripts\T4MBillBObjSC.cs" />
      <Compile Include="Assets\T4M\Scripts\T4MLodObjSC.cs" />

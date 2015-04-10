@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Monkey : MonoBehaviour {
+public class Monkey1 : MonoBehaviour {
     Transform m_transform;
     float delayTime = 0.5f;
     private float orignalY = 0f;
@@ -25,16 +25,16 @@ public class Monkey : MonoBehaviour {
 
     void Jump()
     {
-        m_transform.Translate(Vector3.up * 0.5f); 
+        m_transform.Translate(Vector3.up * 1f); 
     }
 
-    IEnumerator Down()
-    {
-        yield return new WaitForSeconds(1f);
-        if (m_transform.position.y > orignalY)
-        {
-            m_transform.Translate(Vector3.down * 0.5f); 
-        }
+    //IEnumerator Down()
+    //{
+    //    yield return new WaitForSeconds(1.5f);
+    //    if (m_transform.position.y > orignalY)
+    //    {
+    //        m_transform.Translate(Vector3.down * 0.5f); 
+    //    }
       
-    }
+    //}
 }
