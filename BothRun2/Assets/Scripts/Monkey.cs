@@ -13,7 +13,7 @@ public class Monkey : MonoBehaviour {
     private int i = 0;
     void Update()
     {
-        if ((orignalY - m_transform.position.y) > 0.05f)
+        if ((orignalY - m_transform.position.y) > 0.1f)
         {
             //i++;
             //if(i==1) 
