@@ -18,11 +18,11 @@ public class Wall : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.tag.Equals("Player") && collision.gameObject.transform.position.y < 0.1f)
         {
             GameManager.Active.GameOver();
         }
-        
+
     }
 
 }

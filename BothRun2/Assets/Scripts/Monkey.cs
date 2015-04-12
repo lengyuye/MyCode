@@ -25,7 +25,9 @@ public class Monkey : MonoBehaviour {
 
     void Jump()
     {
-        m_transform.Translate(Vector3.up * 0.5f); 
+       m_transform.Translate(Vector3.up * 0.5f); 
+       // this.rigidbody.constraints=RigidbodyConstraints.FreezeRotation|RigidbodyConstraints.
+      //  this.rigidbody.AddForce(Vector3.up, ForceMode.Impulse);
     }
 
     IEnumerator Down()
@@ -33,8 +35,7 @@ public class Monkey : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         if (m_transform.position.y > orignalY)
         {
-            m_transform.Translate(Vector3.down * 0.5f); 
+            m_transform.Translate(Vector3.down * 0.5f);
         }
-      
     }
 }
