@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour {
 
     void TryAgain()
     {
-        Application.LoadLevel(0);
+        Application.LoadLevel(1);
         //Debug.Log("TryAgain");
         //Time.timeScale = 1;
         //isOver = false;

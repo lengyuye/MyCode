@@ -5,6 +5,10 @@ public class Monkey : MonoBehaviour {
     Transform m_transform;
     float delayTime = 0.5f;
     private float orignalY = 0f;
+
+    [HideInInspector]
+    public bool isWalkOnWall = false;
+
 	// Use this for initialization
 	void Start () {
         m_transform = this.transform;
@@ -35,7 +39,10 @@ public class Monkey : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         if (m_transform.position.y > orignalY)
         {
-            m_transform.Translate(Vector3.down * 0.5f);
+            if (!isWalkOnWall)
+            {
+                m_transform.Translate(Vector3.down * 0.5f);
+            }
         }
     }
 }

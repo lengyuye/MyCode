@@ -6,7 +6,7 @@ public class StartGame : MonoBehaviour {
 
     void Begin()
     {
-        Application.LoadLevel(0);
+        Application.LoadLevel(1);
     }
 
     void Exit()

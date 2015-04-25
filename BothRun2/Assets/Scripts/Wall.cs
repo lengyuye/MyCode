@@ -18,11 +18,31 @@ public class Wall : MonoBehaviour {
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag.Equals("Player") && collision.gameObject.transform.position.y < 0.1f)
+        if (collision.gameObject.tag.Equals("Player") )
         {
-            GameManager.Active.GameOver();
+            if (collision.gameObject.transform.position.y < 0.1f)
+            {
+                GameManager.Active.GameOver();
+            }
+            else
+            {
+                Debug.Log("isWalkOnWall");
+                Monkey monkey = collision.gameObject.GetComponent<Monkey>();
+                monkey.isWalkOnWall = true;
+            }
+           
         }
 
+    }
+
+    void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            Monkey monkey = collision.gameObject.GetComponent<Monkey>();
+            monkey.isWalkOnWall = false;
+            collision.gameObject.transform.position = new Vector3(collision.gameObject.transform.position.x, 0f, collision.gameObject.transform.position.z);
+        }
     }
 
 }
