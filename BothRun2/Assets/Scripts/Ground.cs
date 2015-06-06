@@ -9,10 +9,13 @@ public class Ground : MonoBehaviour {
     float speed = 0.05f;
     float moveLength = 25.09f;
     GameObject wallObj;
+    private bool m_HasShowInCamera = false;
+    private BoxCollider m_collider;
 
     // Use this for initialization
     void Start()
     {
+        m_collider = this.GetComponentInChildren<BoxCollider>();
         m_transform = this.transform;
         if (GameManager.Active)
         {
@@ -26,9 +29,11 @@ public class Ground : MonoBehaviour {
      
     }
 
-    private void RandomCreateWall()
-    {
-        Transform wall = m_transform.FindChild("Wall");
+
+	
+	private void RandomCreateWall()
+	{
+		Transform wall = m_transform.FindChild("Wall");
         if (wall) Destroy(wall.gameObject);
 
         int wallIndex = Random.Range(0, GameManager.Active.wallsPerfabs.Count - 1);
@@ -44,25 +49,57 @@ public class Ground : MonoBehaviour {
     }
 
 
+
+
+
+
+    private float m_checkTime = 0.5f;
     // Update is called once per frame
     void Update()
     {
         if (Time.timeScale == 0) return;
+        /*
         m_transform.Translate(Vector3.back * speed);
         if (m_transform.position.z < -2 * moveLength)
         {
             //移动地图
             m_transform.position = new Vector3(m_transform.position.x, m_transform.position.y, moveLength);
             //随机改变位置
-            //RandomPosition();
             RandomCreateWall();
+        }*/
+        m_checkTime -= Time.deltaTime;
+        if (m_checkTime < 0)
+        {
+            m_checkTime = 0.5f;
+            if (!CameraFollow.Active.IsVisible(m_collider) )
+            {
+				if(m_HasShowInCamera)
+				{
+                   GroundManager manger= this.gameObject.transform.parent.gameObject.GetComponent<GroundManager>();
+                   if (manger)
+                   {
+                       manger.AddGround();
+                   }
+					//Destroy(this.gameObject);
+                    this.gameObject.SetActive(false);
+				}
+            }
+            else
+            {
+                if (!m_HasShowInCamera) m_HasShowInCamera = true;
+            }
+
         }
-    }
+		//Test();
+	}
 
     private void RandomPosition()
     {
         Wall wall = m_transform.FindChild("Wall").GetComponent<Wall>();
         wall.RandomPosition();
     }
+
+
+
 
 }

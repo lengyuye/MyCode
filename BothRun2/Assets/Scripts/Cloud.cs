@@ -4,29 +4,31 @@ using System.Collections;
 public class Cloud : MonoBehaviour {
 
     Transform m_transform;
-    float speed = 0.05f;
-
+    private float time = 2f;
+    private BoxCollider m_collider;
+    
 
     void Start()
     {
         m_transform = this.transform;
+        m_collider = this.GetComponentInChildren<BoxCollider>();
     }
 
 
     void Update()
     {
-        m_transform.Translate(Vector3.back * speed);
-    }
-
-	
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.tag.Equals("end"))
+        time -= Time.deltaTime;
+        
+        if (time < 0)
         {
-			GameManager.Active.cloudsNum--;
-            this.gameObject.SetActive(false);
+            time = 2f;
+            if (!CameraFollow.Active.IsVisible(m_collider))
+            {
+                GameManager.Active.cloudsNum--;
+                this.gameObject.SetActive(false);
+            }
         }
-    }
 
+    }
 
 }

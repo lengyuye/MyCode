@@ -25,6 +25,7 @@ public class Clouds : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         createTimeInterval -= Time.deltaTime;
+        
         if (time > 0)
         {
             CreateCloud();
@@ -38,10 +39,6 @@ public class Clouds : MonoBehaviour {
                 CreateCloud();
             }
         }
-
-
-        
-
 	}
 
     private int randomIndex = 0;

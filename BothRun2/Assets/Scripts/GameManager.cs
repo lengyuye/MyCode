@@ -6,10 +6,12 @@ public class GameManager : MonoBehaviour {
 
     public List<GameObject> wallsPerfabs = new List<GameObject>();
     public List<GameObject> cloudPrefabs = new List<GameObject>();
+    [HideInInspector]
     public List<GameObject> cloudsIns = new List<GameObject>();
     public int maxColudsNum = 25;
 
     public static GameManager Active;
+    [HideInInspector]
 	public int cloudsNum=0;
     public UILabel lbTime;
     public UILabel lbGameOver;
@@ -39,6 +41,8 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Time.timeScale = 1;
+		Application.targetFrameRate = 45;
+        
         for (int i = 0; i < maxColudsNum; i++)
         {
             int randomIndex = Random.Range(0, GameManager.Active.cloudPrefabs.Count - 1);
@@ -60,7 +64,6 @@ public class GameManager : MonoBehaviour {
             Time.timeScale = 0;
             SetMenuShow(true);
         }
-      
     }
 
     private void SetMenuShow(bool isShow)
@@ -86,4 +89,6 @@ public class GameManager : MonoBehaviour {
         //SetMenuShow(false);
         //lbTime.text = string.Format("Time:{0}s", 0);
     }
+
+
 }

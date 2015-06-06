@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Monkey1 : MonoBehaviour {
     Transform m_transform;
-    float delayTime = 0.5f;
     private float orignalY = 0f;
+    public float speed = 3f;
 	// Use this for initialization
 	void Start () {
         m_transform = this.transform;
@@ -13,31 +13,29 @@ public class Monkey1 : MonoBehaviour {
     private int i = 0;
     void Update()
     {
-        if ((orignalY - m_transform.position.y) > 0.08f)
+        if ((orignalY - m_transform.position.y) > 0.01f)
         {
             //i++;
             //if(i==1) 
             Debug.Log("orignalY:" + orignalY);
             Debug.Log("m_transform.position.y:" + m_transform.position.y);
             GameManager.Active.GameOver();
-
+        }
+        else
+        {
+            Move();
         }
     }
 	
 
     void Jump()
     {
-       // m_transform.Translate(Vector3.up * 1f); 
         this.rigidbody.AddForce(Vector3.up, ForceMode.Impulse);
     }
 
-    //IEnumerator Down()
-    //{
-    //    yield return new WaitForSeconds(0.5f);
-    //    if (m_transform.position.y > orignalY)
-    //    {
-    //        m_transform.Translate(Vector3.down * 0.5f);
-    //    }
+    void Move()
+    {
+        m_transform.Translate(Vector3.forward * speed * Time.deltaTime);
+    }
 
-    //}
 }
